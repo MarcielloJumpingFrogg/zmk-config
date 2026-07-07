@@ -6,8 +6,57 @@
 #include <dt-bindings/zmk/bt.h>
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
+#define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL k2  &ht LALT  k3  &ht LGUI k4
+#define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht LALT k2  &ht RCTRL  k3  &ht RSHFT k4
+
+/ {
+  combos {
+    compatible = "zmk,combos";
+
+    combo_enter {
+      bindings = <&kp ENTER>;
+      key-position = <27 28>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+    combo_tab {
+      bindings = <&kp TAB>;
+      key-position = <23 24>;
+      layers=<0>;
+      require-prior-idle-ms=<50>;
+    };
+    combo_esc {
+      bindings = <&kp ESC>;
+      key-position = <3 4>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+    combo_bkp {
+      bindings = <&kp DELETE>;
+      key-position = <7 8>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+    combo_copy {
+      bindings = <&kp C_AC_COPY>;
+      key-position = <22 23>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+    combo_paste {
+      bindings = <&kp C_AC_PASTE>;
+      key-position = <23 24>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+     combo_cut {
+      bindings = <&kp C_AC_CUT>;
+      key-position = <22 24>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+  }
+}
 
 / {
     behaviors {
@@ -38,13 +87,13 @@
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; :      │
+            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,    SEMICOLON)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                            &lt SPACE   &mo 1         &mo 2      &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -53,15 +102,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+            &kp N1    &kp N2     &kp N3     &kp N4     &kp N5         &kp N6   &kp N7  &kp N8  &kp N9    &kp N0
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
+          &kp UNDERSCORE &kp LBRC  &kp LBKT  &kp LPAR   &kp TAB       &kp GRAVE  &kp RPAR   &kp RBKT   &kp RBRC   &kp HASH 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+           &kp MINUS &kp PLUS   &kp EQUAL  &kp ASTRK     &kp DOLLAR   &kp APOS  &kp AT     &kp AMPERSAND &kp PIPE &kp BACKSLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &trans     &trans        &trans     &kp K_CANCEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -70,15 +119,15 @@
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+            &kp F1  &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │ 
+           &kp F11 &kp F12 &kp K_VOLUME_DOWN &trans &kp K_VOLUME_UP  &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+          &trans   &trans   &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &caps_word
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans         &trans     &trans
+                                             &kp ESC     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -98,6 +147,27 @@
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
+        };
+
+        4 {
+          bindings = <
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                            &trans     &trans     &trans     &trans
+          >;
+        };
+        5 {
+          bindings = <
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                            &trans     &trans     &trans     &trans
+          >;
         };
     };
 };
