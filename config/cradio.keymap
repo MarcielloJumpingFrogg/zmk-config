@@ -9,6 +9,11 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LCTRL k2  &ht LALT  k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht LALT k2  &ht RCTRL  k3  &ht RSHFT k4
 
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
+
 / {
   combos {
     compatible = "zmk,combos";
@@ -125,7 +130,7 @@
            &kp F11 &kp F12 &kp K_VOLUME_DOWN &trans &kp K_VOLUME_UP  &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-          &trans   &trans   &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &caps_word
+          &trans   &trans   &kp C_PREVIOUS &kp C_PLAY_PAUSE &kp C_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &kp CAPS
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -149,25 +154,25 @@
             >;
         };
 
-       // 4 {
-       //   bindings = <
-       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+        4 {
+          bindings = <
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-       //                                     &trans     &trans     &trans     &trans
-       //   >;
-       // };
-       // 5 {
-       //   bindings = <
-       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                            &trans     &trans     &trans     &trans
+          >;
+        };
+        5 {
+          bindings = <
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-       //                                     &trans     &trans     &trans     &trans
-       //   >;
-       // };
+            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                            &trans     &trans     &trans     &trans
+          >;
+        };
     };
 };
