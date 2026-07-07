@@ -42,24 +42,24 @@
       layers=<0>;
       timeout-ms=<50>;
     };
-//    combo_copy {
-//      bindings = <&kp C_AC_COPY>;
-//      key-positions = <22 23>;
-//      layers=<0>;
-//      timeout-ms=<50>;
-//    };
-//    combo_paste {
-//      bindings = <&kp C_AC_PASTE>;
-//      key-positions = <23 24>;
-//      layers=<0>;
-//      timeout-ms=<50>;
-//    };
-//     combo_cut {
-//      bindings = <&kp C_AC_CUT>;
-//      key-positions = <22 24>;
-//      layers=<0>;
-//      timeout-ms=<50>;
-//    };
+    combo_copy {
+      bindings = <&kp C_AC_COPY>;
+      key-positions = <22 23>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+    combo_paste {
+      bindings = <&kp C_AC_PASTE>;
+      key-positions = <23 24>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
+     combo_cut {
+      bindings = <&kp C_AC_CUT>;
+      key-positions = <22 24>;
+      layers=<0>;
+      timeout-ms=<50>;
+    };
   };
 };
 
