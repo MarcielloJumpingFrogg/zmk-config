@@ -98,7 +98,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt SPACE   &mo 1         &mo 2      &kp BSPC
+                                            &kp SPACE   &mo 1         &mo 2      &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -115,7 +115,7 @@
         //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
            &kp MINUS &kp PLUS   &kp EQUAL  &kp ASTRK     &kp DOLLAR   &kp APOS  &kp AT     &kp AMPERSAND &kp PIPE &kp BACKSLASH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &trans        &trans     &kp K_CANCEL
+                                             &trans     &trans        &trans     &kp CANCEL
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -156,7 +156,7 @@
             >;
         };
 
-        4 {
+        layer4 {
           bindings = <
             &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
@@ -166,7 +166,7 @@
                                             &trans     &trans     &trans     &trans
           >;
         };
-        5 {
+        layer5 {
           bindings = <
             &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
