@@ -132,7 +132,8 @@
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
          //&trans   &trans   &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &caps_word
 
-         &trans   &trans   &trans &trans &trans &kp HOME &kp PG_DOWN &kp PG_UP &kp END &trans
+         &trans   &trans   &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT &trans &trans &trans &trans &caps_word
+         //&trans   &trans   &trans &trans &trans &kp HOME &kp PG_DOWN &kp PG_UP &kp END &caps_word
 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC     &trans         &trans     &trans
