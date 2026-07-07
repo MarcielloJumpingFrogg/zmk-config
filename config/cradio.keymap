@@ -42,24 +42,24 @@
       layers=<0>;
       timeout-ms=<50>;
     };
-  //  combo_copy {
-  //    bindings = <&kp C_AC_COPY>;
-  //    key-positions = <22 23>;
-  //    layers=<0>;
-  //    timeout-ms=<50>;
-  //  };
-  //  combo_paste {
-  //    bindings = <&kp C_AC_PASTE>;
-  //    key-positions = <23 24>;
-  //    layers=<0>;
-  //    timeout-ms=<50>;
-  //  };
-  //   combo_cut {
-  //    bindings = <&kp C_AC_CUT>;
-  //    key-positions = <22 24>;
-  //    layers=<0>;
-  //    timeout-ms=<50>;
-  //  };
+//    combo_copy {
+//      bindings = <&kp C_AC_COPY>;
+//      key-positions = <22 23>;
+//      layers=<0>;
+//      timeout-ms=<50>;
+//    };
+//    combo_paste {
+//      bindings = <&kp C_AC_PASTE>;
+//      key-positions = <23 24>;
+//      layers=<0>;
+//      timeout-ms=<50>;
+//    };
+//     combo_cut {
+//      bindings = <&kp C_AC_CUT>;
+//      key-positions = <22 24>;
+//      layers=<0>;
+//      timeout-ms=<50>;
+//    };
   };
 };
 
@@ -130,8 +130,9 @@
            &kp F11 &kp F12 &kp K_VOLUME_DOWN &trans &kp K_VOLUME_UP  &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-         &trans   &trans   &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &kp CAPS
-        //              &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+         //&trans   &trans   &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &caps_word
+
+         &trans   &trans   &trans &trans &trans &kp HOME &kp PG_DOWN &kp PG_UP &kp END &caps_word
 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC     &trans         &trans     &trans
