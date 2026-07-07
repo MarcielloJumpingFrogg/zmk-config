@@ -55,8 +55,8 @@
       layers=<0>;
       timeout-ms=<50>;
     };
-  }
-}
+  };
+};
 
 / {
     behaviors {
