@@ -149,25 +149,25 @@
             >;
         };
 
-        4 {
-          bindings = <
-            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+       // 4 {
+       //   bindings = <
+       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                                            &trans     &trans     &trans     &trans
-          >;
-        };
-        5 {
-          bindings = <
-            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+       //                                     &trans     &trans     &trans     &trans
+       //   >;
+       // };
+       // 5 {
+       //   bindings = <
+       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
 
-            &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                                            &trans     &trans     &trans     &trans
-          >;
-        };
+       //     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+       //                                     &trans     &trans     &trans     &trans
+       //   >;
+       // };
     };
 };
