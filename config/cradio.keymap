@@ -130,7 +130,9 @@
            &kp F11 &kp F12 &kp K_VOLUME_DOWN &trans &kp K_VOLUME_UP  &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT   &kp ENTER
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-          &trans   &trans   &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &kp CAPSLOCK
+        // &trans   &trans   &kp K_PREVIOUS &kp K_PLAY_PAUSE &kp K_NEXT &kp HOME &kp PG_DOWN &kp PG_UP &kp END &kp CAPSLOCK
+                      &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &kp ESC     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
